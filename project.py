@@ -1,6 +1,7 @@
 import csv
 import math
 import random
+import matplotlib.pyplot as plt
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
@@ -266,6 +267,10 @@ class OutPutInterface(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(630, 865)
+        self.verticalScrollBar = QtWidgets.QScrollBar(Dialog)
+        self.verticalScrollBar.setGeometry(QtCore.QRect(500, 10, 16, 281))
+        self.verticalScrollBar.setOrientation(QtCore.Qt.Vertical)
+        self.verticalScrollBar.setObjectName("verticalScrollBar")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(0, 10, 251, 51))
         font = QtGui.QFont()
@@ -441,19 +446,25 @@ class OutPutInterface(object):
         self.powerDisel1.setText("")
         self.powerDisel1.setObjectName("powerDisel1")
         self.Show1 = QtWidgets.QPushButton(Dialog)
+        self.Show1.setGeometry(QtCore.QRect(10, 200, 601, 71))
         font = QtGui.QFont()
         font.setFamily("BankGothic Lt BT")
         font.setPointSize(36)
+        self.Show1.setFont(font)
         self.Show1.setObjectName("Show1")
         self.Show2 = QtWidgets.QPushButton(Dialog)
+        self.Show2.setGeometry(QtCore.QRect(10, 480, 601, 71))
         font = QtGui.QFont()
         font.setFamily("BankGothic Lt BT")
         font.setPointSize(36)
+        self.Show2.setFont(font)
         self.Show2.setObjectName("Show2")
         self.Show3 = QtWidgets.QPushButton(Dialog)
+        self.Show3.setGeometry(QtCore.QRect(10, 780, 601, 71))
         font = QtGui.QFont()
         font.setFamily("BankGothic Lt BT")
         font.setPointSize(36)
+        self.Show3.setFont(font)
         self.Show3.setObjectName("Show3")
         self.retranslateUi(Dialog)
         self.Show1.clicked.connect(self.Show11)
